@@ -13,5 +13,7 @@
 	<ul class="range result">
 		<li>Start of range: <%= @calculation.cidr.first %></li>
 		<li>End of range: <%= @calculation.cidr.last %></li>
+    <li>Netmask: <%= @calculation.cidr.netmask %></li>
+    <li>Number of addresses: <%= @calculation.cidr.size %></li>
 	</ul>
 <% end %>
