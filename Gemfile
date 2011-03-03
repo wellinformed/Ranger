@@ -7,7 +7,7 @@ gem 'rails', '3.0.5'
 
 gem 'sqlite3'
 
-gem 'iplogic'
+gem 'iplogic', '~> 0.1.4'
 
 # Use unicorn as the web server
 # gem 'unicorn'
