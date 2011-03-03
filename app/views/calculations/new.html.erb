@@ -11,7 +11,7 @@
 
 <% if @calculation.valid? %>
 	<ul class="range result">
-		<li>Start of range: <%= @calculation.start_of_range %></li>
-		<li>End of range: <%= @calculation.end_of_range %></li>
+		<li>Start of range: <%= @calculation.cidr.first %></li>
+		<li>End of range: <%= @calculation.cidr.last %></li>
 	</ul>
 <% end %>
