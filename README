@@ -1,3 +1,12 @@
+== Ranger
+
+Turns a CIDR Notation range like
+
+92.43.66.128/26
+
+into two IP addresses showing the start and end of the range.
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
