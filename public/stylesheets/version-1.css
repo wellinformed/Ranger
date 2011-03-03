@@ -7,6 +7,10 @@ body{
 	background-color: #eee;
 }
 
+h1 {
+	letter-spacing: -3px;
+}
+
 label {
 	font-weight: bold;
 }
