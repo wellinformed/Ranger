@@ -6,6 +6,8 @@ Turns a CIDR Notation range like
 
 into two IP addresses showing the start and end of the range.
 
+The heavy lifting is done by @jayferd's iplogic: https://github.com/jayferd/iplogic
+
 A live instance of Ranger is hosted at Heroku and can be found here:
 
 http://ranger.wellinformed.co.uk
