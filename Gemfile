@@ -7,6 +7,10 @@ gem 'rails', '3.2.12'
 
 gem 'sqlite3'
 
+group :production do
+  gem 'pg'  
+end
+
 gem 'iplogic', '~> 0.1.4'
 
 # Use unicorn as the web server
