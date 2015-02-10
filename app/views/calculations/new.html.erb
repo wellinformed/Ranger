@@ -1,6 +1,6 @@
 <%= form_for @calculation do |f| %>
 	<% if @calculation.errors.any? %>
-		<p>OH NO! There's something wrong with the address you entered, it needs to look something like: <strong>92.43.66.128/26</strong></p>
+		<p class="error-message">OH NO! There's something wrong with the address you entered, it needs to look something like: <strong>92.43.66.128/26</strong></p>
 	<% end %>
 	<p>
 		<%= f.label :cidr_notation_range, 'Enter the impossible to decipher nerd format'%><br>
