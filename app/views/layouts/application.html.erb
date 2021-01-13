@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Ranger</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
+<header>
+  <h1>Ranger</h1>
+  <p>Turn a CIDR Notation address range into some IP addresses.</p>
+</header>
+
+<%= yield %>
+
+<footer>
+  <p>Ranger is <%= link_to("A Well Informed Product", "http://wellinformed.co.uk") %>.</p>
+  <p>IP calculations handled by <%= link_to "iplogic", "https://github.com/jayferd/iplogic" %>.</p>
+  <p>Grab the <%= link_to "code at github", "https://github.com/wellinformed/Ranger" %> if you're so inclined.</p>
+</footer>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4890474-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
