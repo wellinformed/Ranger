@@ -1,19 +1,19 @@
 <%= form_for @calculation do |f| %>
-	<% if @calculation.errors.any? %>
-		<p class="error-message">OH NO! There's something wrong with the address you entered, it needs to look something like: <strong>92.43.66.128/26</strong></p>
-	<% end %>
-	<p>
-		<%= f.label :cidr_notation_range, 'Enter the impossible to decipher nerd format'%><br>
-		Should look something like: <strong>92.43.66.128/26</strong><br>
-		<%= f.text_field :cidr_notation_range %> <%= f.submit 'Calculate!' %>
-	</p>
+<% if @calculation.errors.any? %>
+	<p class="error-message">OH NO! There's something wrong with the address you entered, it needs to look something like: <strong>92.43.66.128/26</strong></p>
+<% end %>
+<p>
+	<%= f.label :cidr_notation_range, 'Enter the impossible to decipher nerd format'%><br>
+	Should look something like: <strong>92.43.66.128/26</strong><br>
+	<%= f.text_field :cidr_notation_range %> <%= f.submit 'Calculate!' %>
+</p>
 <% end %>
 
 <% if @calculation.valid? %>
-	<ul class="range result">
-		<li>Start of range: <%= @calculation.cidr.first %></li>
-		<li>End of range: <%= @calculation.cidr.last %></li>
-    <li>Netmask: <%= @calculation.cidr.netmask %></li>
-    <li>Number of addresses: <%= @calculation.cidr.size %></li>
-	</ul>
+<ul class="range result">
+	<li>Start of range: <%= @calculation.cidr.first %></li>
+	<li>End of range: <%= @calculation.cidr.last %></li>
+<li>Netmask: <%= @calculation.cidr.netmask %></li>
+<li>Number of addresses: <%= @calculation.cidr.size %></li>
+</ul>
 <% end %>
