@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ranger</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" media="all" href="application.css" />
+    <script type="text/javascript" src="dist/bundle.js"></script>
+  </head>
+
+  <body onload="setupApplication(this)">
+    <header>
+      <h1>Ranger</h1>
+      <p>Turn a CIDR Notation address range into some IP addresses.</p>
+    </header>
+    <p id="error-message" class="error-message" style="display: none">
+      OH NO! There's something wrong with the address you entered, it needs to
+      look something like: <strong>92.43.66.128/26</strong>
+    </p>
+    <form id="calculator">
+      <p>
+        <label for="cidr_notation_range">
+          Enter the impossible to decipher nerd format
+        </label>
+        <br />
+        Should look something like: <strong>92.43.66.128/26</strong>
+        <br />
+        <input
+          type="text"
+          id="cidr_notation_range"
+          name="cidr_notation_range"
+        />
+        <input type="submit" id="calculateButton" value="Calculate!" />
+      </p>
+    </form>
+
+    <ul id="results" class="range result" style="display: none">
+      <li>
+        Start of range:
+        <span id="start_of_range" />
+      </li>
+      <li>
+        End of range:
+        <span id="end_of_range" />
+      </li>
+      <li>
+        Netmask:
+        <span id="netmask" />
+      </li>
+      <li>
+        Number of addresses:
+        <span id="number_of_addresses" />
+      </li>
+    </ul>
+
+    <footer>
+      <p>
+        Ranger is
+        <a href="http://wellinformed.co.uk">A Well Informed Product"</a>.
+        &copy;<span id="year">2011</span>.
+      </p>
+      <p>
+        IP calculations handled by
+        <a href="https://npm.io/package/netmask">netmask</a>.
+      </p>
+      <p>
+        Grab the <a href="https://github.com/wellinformed/Ranger">code</a> at
+        github if you're so inclined.
+      </p>
+    </footer>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-4890474-9"]);
+      _gaq.push(["_trackPageview"]);
+
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src =
+          ("https:" == document.location.protocol
+            ? "https://ssl"
+            : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
